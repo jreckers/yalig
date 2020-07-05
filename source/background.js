@@ -25,6 +25,20 @@ function createYesterdayString() {
 	return formatDate(yesterday);
 }
 
+
+function createTodayTime() {
+	var goTime = new Date();
+	var currentHours = ('0' + goTime.getHours()).substr(-2);
+	var currentMins = ('0' + goTime.getMinutes()).substr(-2);
+	var currentMonth = ('0' + goTime.getMonth()).substr(-2);
+	var currentDay = ('0' + goTime.getDay()).substr(-2);
+	
+	console.log('G0-' + currentMonth + currentDay + ' - ' + currentHours + currentMins);
+	console.log(goTime.toLocaleDateString());
+
+	return formatGoTime(today);
+}
+
 function createTodayString() {
 	var today = new Date();
 	return formatDate(today);
@@ -240,6 +254,14 @@ function createContextMenu() {
 		"contexts" : ["editable"],
 		"onclick": function(info, tab) { insertText(createTodayString()); }
 	});
+//jore
+	chrome.contextMenus.create({
+		"title" : "Current Time (" + createTodayString() + ")",
+		"parentId" : contextMenu,
+		"contexts" : ["editable"],
+		"onclick": function(info, tab) { insertText(createTodayString()); }
+	});
+
 	chrome.contextMenus.create({
 		"title" : "Tomorrow (" + createTomorrowString() + ")",
 		"parentId" : contextMenu,
