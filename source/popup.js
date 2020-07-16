@@ -52,7 +52,7 @@ function handleResponse(response) {
 	window.close();
 }
 
-
+var createTodayTime = chrome.extension.getBackgroundPage().createTodayTime(); //jore
 var todayString = chrome.extension.getBackgroundPage().createTodayString();
 var yesterdayString = chrome.extension.getBackgroundPage().createYesterdayString();
 var tomorrowString = chrome.extension.getBackgroundPage().createTomorrowString();
@@ -101,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		paragraph[i].addEventListener("mouseout", clearSelected);
 		paragraph[i].addEventListener("click", clickSelectedParagraphs);
 	}
+	makeTextInsertButton("time", createTodayTime); //jore
 	makeTextInsertButton("yesterday", yesterdayString);
 	makeTextInsertButton("today", todayString);
 	makeTextInsertButton("tomorrow", tomorrowString);
