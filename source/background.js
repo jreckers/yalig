@@ -32,7 +32,7 @@ function createTodayTime() {
   var goTime = new Date();
   var currentHours = ("0" + goTime.getHours()).substr(-2);
   var currentMins = ("0" + goTime.getMinutes()).substr(-2);
-  var currentMonth = ("0" + goTime.getMonth()).substr(-1);
+  var currentMonth = ("0" + goTime.getMonth()).substr(2);
   var currentDay = ("0" + goTime.getDay()).substr(-2);
 
   console.log(
