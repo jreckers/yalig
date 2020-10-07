@@ -40,7 +40,7 @@ function createTodayTime() {
 //  console.log(goTime);
   console.log(goTime.toLocaleDateString());
 
-  return formatGoTime(goTime);
+  return formatDate(goTime);
 }
 
 function createTodayString() {
