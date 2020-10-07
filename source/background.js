@@ -36,9 +36,7 @@ function createTodayTime() {
   var currentDate = ("0" + goTime.getDate()).substr(-2);
   var currentDay = ("0" + (goTime.getDay())).substr(-2);
 
-  console.log(
-    "G0-" + currentMonth + currentDay + " - " + currentHours + currentMins
-  );
+  console.log("G0-" + currentMonth + currentDay + " - " + currentHours + currentMins);
 //  console.log(goTime);
   console.log(goTime.toLocaleDateString());
 

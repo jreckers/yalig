@@ -9,6 +9,6 @@
 
   console.log(currentMonth);
   console.log(currentDay);
-  console.log(currentHours);
-  console.log(currentMins);
+  console.log("Hours:" + currentHours);
+  console.log("Minutes:" + currentMins);
   console.log(currentHours + ":" + currentMins)
